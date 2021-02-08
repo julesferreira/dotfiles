@@ -1,3 +1,3 @@
 ```
-chezmoi init https://github.com/julesferreira/dotfiles
+curl -sfL https://raw.githubusercontent.com/julesferreira/dotfiles/master/install.sh | sh
 ```
