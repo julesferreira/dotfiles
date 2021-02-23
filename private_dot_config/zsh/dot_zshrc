@@ -85,6 +85,7 @@ plugins=(
 	fzf
 	git
 	gnu-utils
+	magic-enter
 	nvm
 	vi-mode
 	zsh-autosuggestions
