@@ -1,8 +1,0 @@
-set editing-mode vi
-
-# autocomplete on single tab
-#set show-all-if-ambiguous on
-# ignore case
-set completion-ignore-case on
-# complete prefix first, then all
-set menu-complete-display-prefix on
