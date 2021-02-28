@@ -48,3 +48,13 @@ let maplocalleader = ' '
 let g:gruvbox_transp_bg = 1
 colorscheme gruvbox8_hard
 
+aug my_configs
+	au!
+	nn <localleader>vo :tabnew $MYVIMRC<cr>
+	nn <localleader>vb :tabnew $MYVIMRC.bak<cr>
+	nn <localleader>vs :so $MYVIMRC<cr>:AirlineRefresh<cr>
+	nn <localleader>omz :tabnew $ZSH/custom/<cr>
+	nn <localleader>zsh :tabnew $ZDOTDIR/.zshrc<cr>
+	nn <localleader>tmux :tabnew $XDG_CONFIG_HOME/tmux/tmux.conf<cr>
+aug end
+
