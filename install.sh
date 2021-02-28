@@ -17,4 +17,4 @@ else
 fi
 
 # exec: replace current process with chezmoi init
-exec "$chezmoi" init https://github.com/julesferreira/dotfiles
+exec "$chezmoi" init git@github.com:julesferreira/dotfiles.git
