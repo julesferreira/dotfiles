@@ -90,4 +90,9 @@ aug my_coc_group
 		\'checkCurrentLine': v:true,
 	\})
 
+	call coc#config('html.filetypes', ["html","handlebars","htmldjango","blade","twig"])
+
+	let g:coc_filetype_map = {
+	\ 'html.twig.js.css': 'html',
+	\ }
 aug end

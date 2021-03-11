@@ -10,6 +10,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'haya14busa/incsearch.vim'
+Plug 'julesferreira/vim-split-join'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-plug'
@@ -18,6 +19,7 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'kevinoid/vim-jsonc'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'nelsyeung/twig.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -34,6 +36,7 @@ let g:coc_global_extensions = [
 	\'coc-explorer',
 	\'coc-fzf-preview',
 	\'coc-highlight',
+	\'coc-html',
 	\'coc-json',
 	\'coc-phpls',
 	\'coc-prettier',
@@ -58,3 +61,35 @@ aug my_configs
 	nn <localleader>tmux :tabnew $XDG_CONFIG_HOME/tmux/tmux.conf<cr>
 aug end
 
+aug experimental_group
+	au!
+
+	nn <silent><localleader>sp :set spell!<cr>
+
+	let g:splitJoin_do_mapping = 0
+	noremap <LocalLeader>j( :<c-u>call splitJoinCommon#joinParameters()<return>
+	noremap <LocalLeader>j) :<c-u>call splitJoinCommon#joinParameters()<return>
+	noremap <LocalLeader>j[ :<c-u>call splitJoinJs#joinArray()<return>
+	noremap <LocalLeader>j[ :<c-u>call splitJoinPhp#joinArray()<return>
+	noremap <LocalLeader>j] :<c-u>call splitJoinJs#joinArray()<return>
+	noremap <LocalLeader>j] :<c-u>call splitJoinPhp#joinArray()<return>
+	noremap <LocalLeader>j{ :<c-u>call splitJoinJs#joinObject()<return>
+	noremap <LocalLeader>j} :<c-u>call splitJoinJs#joinObject()<return>
+	noremap <LocalLeader>s( :<c-u>call splitJoinCommon#splitParameters()<return>
+	noremap <LocalLeader>s) :<c-u>call splitJoinCommon#splitParameters()<return>
+	noremap <LocalLeader>s[ :<c-u>call splitJoinJs#splitArray()<return>
+	noremap <LocalLeader>s[ :<c-u>call splitJoinPhp#splitArray()<return>
+	noremap <LocalLeader>s] :<c-u>call splitJoinJs#splitArray()<return>
+	noremap <LocalLeader>s] :<c-u>call splitJoinPhp#splitArray()<return>
+	noremap <LocalLeader>s{ :<c-u>call splitJoinJs#splitObject()<return>
+	noremap <LocalLeader>s} :<c-u>call splitJoinJs#splitObject()<return>
+aug end
+
+" ============================================================================
+" commentary {{{
+" ============================================================================
+aug commentary
+	au!
+	au FileType html.twig.js.css setlocal commentstring={#\ %s\ #}
+aug END
+" }}}
