@@ -93,3 +93,23 @@ aug commentary
 	au FileType html.twig.js.css setlocal commentstring={#\ %s\ #}
 aug END
 " }}}
+
+aug quickfix_experimental_group
+	au!
+
+	function! s:ToggleQf()
+		for buffer in tabpagebuflist()
+			if bufname(buffer) == ''
+				" then it should be the quickfix window
+				cclose
+				return
+			endif
+		endfor
+
+		copen
+	endfunction
+
+	nn <leader>co :call <sid>ToggleQf()<cr>
+aug END
+
+
