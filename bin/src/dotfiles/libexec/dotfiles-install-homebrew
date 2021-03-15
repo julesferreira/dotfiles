@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+. "$_DOTFILES_ROOT"/util/logger.sh
+
+if ! type -p foo &>/dev/null; then
+	log_info 'installing homebrew'
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi

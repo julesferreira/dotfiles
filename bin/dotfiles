@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+bin_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+(exec "$bin_dir"/src/dotfiles/libexec/dotfiles $@)
+
