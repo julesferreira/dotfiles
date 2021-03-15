@@ -57,6 +57,7 @@ aug my_configs
 	nn <localleader>vb :tabnew $MYVIMRC.bak<cr>
 	nn <localleader>vs :so $MYVIMRC<cr>:AirlineRefresh<cr>
 	nn <localleader>omz :tabnew $ZSH/custom/<cr>
+	nn <localleader>zenv :tabnew $HOME/.zshenv<cr>
 	nn <localleader>zsh :tabnew $ZDOTDIR/.zshrc<cr>
 	nn <localleader>tmux :tabnew $XDG_CONFIG_HOME/tmux/tmux.conf<cr>
 aug end
