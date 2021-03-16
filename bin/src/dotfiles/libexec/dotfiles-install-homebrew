@@ -2,9 +2,9 @@
 
 set -e
 
-. "$_DOTFILES_ROOT"/util/logger.sh
+. "$_DOTFILES_ROOT"/util/inc.sh
 
-if ! type -p foo &>/dev/null; then
+if ! type -p brew &>/dev/null; then
 	log_info 'installing homebrew'
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	"$BASH" -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+
+. "$_DOTFILES_ROOT"/util/inc.sh
+
+dotfiles install-homebrew
+
+if type -p brew &>/dev/null; then
+	log_info 'installing homebrew formulae'
+	brew bundle install --no-lock
+else
+	log_error '`brew` not in path'
+	exit 1
+fi
