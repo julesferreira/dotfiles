@@ -87,6 +87,7 @@ plugins=(
 	gnu-utils
 	magic-enter
 	nvm
+	universalarchive
 	vi-mode
 	zsh-autosuggestions
 )
