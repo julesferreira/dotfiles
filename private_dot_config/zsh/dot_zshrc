@@ -84,7 +84,7 @@ plugins=(
 	fast-syntax-highlighting
 	fzf
 	git
-	gnu-utils
+	# gnu-utils
 	magic-enter
 	nvm
 	universalarchive

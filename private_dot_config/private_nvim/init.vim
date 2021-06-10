@@ -60,6 +60,7 @@ aug my_configs
 	nn <localleader>zenv :tabnew $HOME/.zshenv<cr>
 	nn <localleader>zsh :tabnew $ZDOTDIR/.zshrc<cr>
 	nn <localleader>tmux :tabnew $XDG_CONFIG_HOME/tmux/tmux.conf<cr>
+	nn <localleader>todo :tabnew $HOME/todo/todo.md<cr>
 aug end
 
 aug experimental_group
