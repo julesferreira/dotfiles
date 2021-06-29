@@ -78,13 +78,14 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	# fzf
+	# gnu-utils
 	colored-man-pages
 	command-not-found
 	extract
 	fast-syntax-highlighting
-	fzf
 	git
-	# gnu-utils
+	gpg-agent
 	magic-enter
 	nvm
 	universalarchive
@@ -126,3 +127,5 @@ export EDITOR="$VISUAL"
 [[ ! -f "$ZDOTDIR/p10k.zsh" ]] || source "$ZDOTDIR/p10k.zsh"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
