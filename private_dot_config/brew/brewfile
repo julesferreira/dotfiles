@@ -1,7 +1,0 @@
-brew "bash"
-brew "gnupg"
-brew "lastpass-cli"
-brew "neovim"
-brew "pinentry-mac"
-brew "tmux"
-brew "zsh"

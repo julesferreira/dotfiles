@@ -1,0 +1,12 @@
+brew "bash"
+brew "fzf"
+brew "gnupg"
+brew "lastpass-cli"
+brew "neovim"
+brew "node"
+brew "tmux"
+brew "zsh"
+
+{{ if (eq .chezmoi.os "darwin") }}
+brew "pinentry-mac"
+{{ end }}
