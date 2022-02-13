@@ -92,6 +92,8 @@ aug my_coc_group
 
 	call coc#config('html.filetypes', ["html","handlebars","htmldjango","blade","twig"])
 
+	" call coc#config('tsserver.log', 'verbose')
+
 	let g:coc_filetype_map = {
 	\ 'html.twig.js.css': 'html',
 	\ }

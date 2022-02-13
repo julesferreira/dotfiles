@@ -15,7 +15,7 @@ set noshowmode
 set lazyredraw
 
 set ignorecase smartcase
-set clipboard=unnamed,unnamedplus
+set clipboard+=unnamedplus
 
 set termguicolors
 set background=dark

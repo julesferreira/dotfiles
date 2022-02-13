@@ -18,9 +18,12 @@ Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'kevinoid/vim-jsonc'
+Plug 'leafgarland/typescript-vim'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'nelsyeung/twig.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'ron89/thesaurus_query.vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -28,6 +31,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'yaegassy/coc-tailwindcss',  {'do': 'npm install && npm run build', 'branch': 'feat/support-v3-and-use-server-pkg'}
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -49,6 +53,7 @@ let mapleader = ' '
 let maplocalleader = ' '
 
 let g:gruvbox_transp_bg = 1
+" let g:gruvbox_filetype_hi_groups = 1
 colorscheme gruvbox8_hard
 
 aug my_configs
@@ -66,6 +71,8 @@ aug end
 aug experimental_group
 	au!
 
+	nn <localleader>fx :CocCommand eslint.executeAutofix<cr>
+	nn <localleader>p :CocCommand prettier.formatFile<cr>
 	nn <silent><localleader>sp :set spell!<cr>
 
 	let g:splitJoin_do_mapping = 0
@@ -85,6 +92,8 @@ aug experimental_group
 	noremap <LocalLeader>s] :<c-u>call splitJoinPhp#splitArray()<return>
 	noremap <LocalLeader>s{ :<c-u>call splitJoinJs#splitObject()<return>
 	noremap <LocalLeader>s} :<c-u>call splitJoinJs#splitObject()<return>
+
+	let g:tq_openoffice_en_file="/usr/share/mythes/th_en_US_v2"
 aug end
 
 " ============================================================================
